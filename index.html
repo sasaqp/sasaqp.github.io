@@ -83,7 +83,8 @@ h1, h2, h3 {
 .header-brand img {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .header-btn {
@@ -113,11 +114,12 @@ h1, h2, h3 {
 }
 
 .hero-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
+  width: 320px;
+  height: 107px;
+  border-radius: 12px;
   margin-bottom: 24px;
   box-shadow: 0 0 0 3px rgba(255,45,85,.3);
+  object-fit: contain;
 }
 
 .hero h1 {
@@ -885,6 +887,11 @@ h1, h2, h3 {
     font-size: 13px;
   }
 
+  .hero-avatar {
+    width: 240px;
+    height: 80px;
+  }
+
   .example-pair {
     grid-template-columns: 1fr;
   }
@@ -897,6 +904,11 @@ h1, h2, h3 {
 }
 
 @media (max-width: 420px) {
+  .hero-avatar {
+    width: 200px;
+    height: 67px;
+  }
+
   .styles-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -922,7 +934,7 @@ h1, h2, h3 {
 <section class="hero">
   <div class="container">
     <div class="hero-badge">🤖 Бот в MAX</div>
-    <img class="hero-avatar" src="https://i.oneme.ru/i?r=BTFjO43w8Yr1OSJ4tcurq5HiAZJIUcn50nog89w9zRyClPy4ePJqkr65xxKnGpLOYvo" alt="Смешные портреты">
+    <img class="hero-avatar" src="images/logo-wide.png" alt="Смешные портреты">
     <h1>Преврати фото в смешной портрет за 1 минуту</h1>
 
     <div class="hero-discount-badge">
