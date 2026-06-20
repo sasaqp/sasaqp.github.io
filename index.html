@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Смешные портреты — преврати фото в шедевр | Бот в MAX</title>
+<meta name="description" content="Загрузи фото, выбери стиль и получи смешной AI-портрет за 1 минуту. 10+ стилей: карикатура, шарж, мем, аниме. Работает через MAX.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="AI портрет, шарж по фото, карикатура онлайн, смешные фото, MAX бот, генерация портрета">
+<meta name="theme-color" content="#ff2d55">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Смешные портреты — преврати фото в шедевр">
+<meta property="og:description" content="Загрузи фото, выбери стиль и получи смешной AI-портрет за 1 минуту. 10+ стилей, от 59 ₽. Работает через MAX.">
+<meta property="og:image" content="https://i.oneme.ru/i?r=BTFjO43w8Yr1OSJ4tcurq5HiAZJIUcn50nog89w9zRyClPy4ePJqkr65xxKnGpLOYvo">
+<meta property="og:url" content="https://max.ru/se13299668_1_bot">
+
+<link rel="preconnect" href="https://i.oneme.ru">
+<link rel="preconnect" href="https://max.ru">
+
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #0b0b0f;
+  color: #e8e8ee;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.header-btn {
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+  flex-shrink: 0;
+}
+
+.header-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(255,45,85,.35);
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 60px 20px 50px;
+  text-align: center;
+  background: radial-gradient(ellipse 600px 400px at 50% -60px, rgba(255,45,85,.15), transparent);
+}
+
+.hero-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 0 3px rgba(255,45,85,.3);
+}
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff 40%, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #999aae;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+  box-shadow: 0 4px 24px rgba(255,45,85,.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,45,85,.45);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: rgba(255,255,255,.08);
+  color: #e8e8ee;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.12);
+  transition: background .2s, border-color .2s;
+  margin-left: 12px;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.25);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,45,85,.12);
+  color: #ff6b6b;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-discount-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(255,107,53,.2), rgba(255,45,85,.2));
+  border: 1px solid rgba(255,45,85,.3);
+  color: #ffb347;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,45,85,0); }
+  50% { box-shadow: 0 0 16px 4px rgba(255,45,85,.2); }
+}
+
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.hero-avatars {
+  display: flex;
+}
+
+.hero-avatars span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: -8px;
+  border: 2px solid #0b0b0f;
+}
+
+.hero-avatars span:first-child { margin-left: 0; background: #3b82f6; }
+.hero-avatars span:nth-child(2) { background: #8b5cf6; }
+.hero-avatars span:nth-child(3) { background: #f59e0b; }
+.hero-avatars span:nth-child(4) { background: #10b981; }
+.hero-avatars span:nth-child(5) { background: #ef4444; }
+
+.hero-social-text {
+  font-size: 14px;
+  color: #999aae;
+}
+
+.hero-social-text b {
+  color: #e8e8ee;
+}
+
+.hero-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #999aae;
+  margin-bottom: 24px;
+}
+
+.hero-counter b {
+  color: #ff6b35;
+  font-size: 16px;
+}
+
+/* ===== Section ===== */
+.section {
+  padding: 70px 20px;
+}
+
+.section-title {
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #999aae;
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto 48px;
+}
+
+/* ===== Examples Grid — Side by Side ===== */
+.examples-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.example-card {
+  background: #14141c;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  transition: transform .25s, border-color .25s;
+}
+
+.example-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,45,85,.2);
+}
+
+.example-pair {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.example-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #1e1e2a, #2a2a3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 14px;
+  position: relative;
+}
+
+.example-img::before {
+  content: '📷 Исходное фото';
+  opacity: .4;
+}
+
+.example-img.after::before {
+  content: '✨ Результат';
+}
+
+.example-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  font-size: 24px;
+  color: #ff6b35;
+  background: rgba(255,107,53,.08);
+  height: 100%;
+  min-height: 60px;
+}
+
+.example-card-label {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #999aae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.example-card-label span:last-child {
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+/* ===== Styles Grid ===== */
+.styles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.style-item {
+  background: #14141c;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color .2s, background .2s, transform .2s;
+  cursor: default;
+}
+
+.style-item:hover {
+  border-color: rgba(255,45,85,.25);
+  background: #1c1c28;
+  transform: translateY(-2px);
+}
+
+.style-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ===== Steps ===== */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.step-card {
+  background: #14141c;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  transition: transform .25s, border-color .25s;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,45,85,.2);
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0 auto 16px;
+}
+
+.step-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: #999aae;
+}
+
+/* ===== Pricing ===== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: #14141c;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform .25s, border-color .25s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,45,85,.2);
+}
+
+.pricing-card.popular {
+  border-color: #ff2d55;
+  background: #1a0f14;
+  transform: scale(1.04);
+  z-index: 1;
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.04) translateY(-4px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  padding: 4px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.pricing-save-badge {
+  display: inline-block;
+  background: rgba(16,185,129,.15);
+  color: #34d399;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pricing-count {
+  font-size: 15px;
+  color: #999aae;
+  margin-bottom: 4px;
+}
+
+.pricing-old-price {
+  font-size: 15px;
+  color: #666;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.pricing-price {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.pricing-per {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.pricing-btn {
+  display: inline-block;
+  background: rgba(255,255,255,.08);
+  color: #e8e8ee;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s;
+}
+
+.pricing-btn:hover {
+  background: rgba(255,255,255,.16);
+}
+
+.pricing-card.popular .pricing-btn {
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  color: #fff;
+}
+
+.pricing-card.popular .pricing-btn:hover {
+  box-shadow: 0 4px 20px rgba(255,45,85,.35);
+}
+
+/* ===== Reviews ===== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.review-card {
+  background: #14141c;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 24px 20px;
+  transition: border-color .2s;
+}
+
+.review-card:hover {
+  border-color: rgba(255,45,85,.15);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.review-avatar.a { background: #3b82f6; }
+.review-avatar.b { background: #8b5cf6; }
+.review-avatar.c { background: #f59e0b; }
+
+.review-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.review-stars {
+  font-size: 13px;
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #999aae;
+  line-height: 1.6;
+}
+
+/* ===== Benefits ===== */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.benefit-item {
+  background: #14141c;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color .2s;
+}
+
+.benefit-item:hover {
+  border-color: rgba(255,45,85,.15);
+}
+
+.benefit-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.benefit-text h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.benefit-text p {
+  font-size: 13px;
+  color: #999aae;
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  color: #e8e8ee;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: color .2s;
+}
+
+.faq-question:hover {
+  color: #ff6b35;
+}
+
+.faq-arrow {
+  transition: transform .3s;
+  font-size: 14px;
+  color: #666;
+}
+
+.faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 0 20px;
+  font-size: 15px;
+  color: #999aae;
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+}
+
+/* ===== Final CTA ===== */
+.final-cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(ellipse 700px 300px at 50% 100%, rgba(255,45,85,.12), transparent);
+}
+
+.final-cta h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.final-cta p {
+  color: #999aae;
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+
+/* ===== Sticky CTA (Mobile) ===== */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 12px 20px;
+  background: rgba(11,11,15,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,.08);
+  transform: translateY(100%);
+  transition: transform .35s ease;
+}
+
+.sticky-cta.show {
+  transform: translateY(0);
+}
+
+.sticky-cta a {
+  display: block;
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: box-shadow .2s;
+  box-shadow: 0 4px 20px rgba(255,45,85,.3);
+}
+
+.sticky-cta a:hover {
+  box-shadow: 0 8px 32px rgba(255,45,85,.45);
+}
+
+/* ===== Desktop CTA (floating) ===== */
+.desktop-cta {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+}
+
+.desktop-cta a {
+  display: none;
+  padding: 14px 22px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(255,45,85,.3);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.desktop-cta a:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(255,45,85,.45);
+}
+
+@media (min-width: 769px) {
+  .desktop-cta a {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  .sticky-cta {
+    display: block;
+  }
+  .footer {
+    padding-bottom: 80px;
+  }
+  .final-cta {
+    padding-bottom: 100px;
+  }
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 32px 20px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  font-size: 13px;
+  color: #555;
+}
+
+.footer a {
+  color: #777;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ff6b35;
+}
+
+/* ===== Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-discount-badge {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===== Media ===== */
+@media (max-width: 640px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-4px);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn-secondary {
+    margin-left: 0;
+  }
+
+  .styles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .example-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .example-arrow {
+    height: auto;
+    padding: 8px 0;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 420px) {
+  .styles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="header-brand">
+    <img src="https://i.oneme.ru/i?r=BTFjO43w8Yr1OSJ4tcurq5HiAZJIUcn50nog89w9zRyClPy4ePJqkr65xxKnGpLOYvo" alt="Смешные портреты">
+    Смешные портреты
+  </div>
+  <a class="header-btn" href="https://max.ru/se13299668_1_bot" target="_blank">Запустить в MAX</a>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🤖 Бот в MAX</div>
+    <img class="hero-avatar" src="https://i.oneme.ru/i?r=BTFjO43w8Yr1OSJ4tcurq5HiAZJIUcn50nog89w9zRyClPy4ePJqkr65xxKnGpLOYvo" alt="Смешные портреты">
+    <h1>Преврати фото в смешной портрет за 1 минуту</h1>
+
+    <div class="hero-discount-badge">
+      🔥 −20% на первый пакет — до 25 июня
+    </div>
+
+    <p>Загрузи фото → выбери стиль → получи смешной AI-портрет за 1–3 минуты прямо в MAX. Без регистрации и сайтов.</p>
+
+    <div class="hero-social-proof">
+      <div class="hero-avatars">
+        <span>👤</span>
+        <span>👤</span>
+        <span>👤</span>
+        <span>👤</span>
+        <span>👤</span>
+      </div>
+      <div class="hero-social-text"><b>12 450+</b> портретов уже создано</div>
+    </div>
+
+    <div class="hero-counter">
+      ⚡ <b id="onlineCount">38</b> человек сейчас в боте
+    </div>
+
+    <div class="hero-buttons">
+      <a class="btn-primary" href="https://max.ru/se13299668_1_bot" target="_blank">🔥 Создать портрет</a>
+      <a class="btn-secondary" href="#pricing">Посмотреть цены</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Examples ===== -->
+<section class="section" id="examples">
+  <div class="container reveal">
+    <h2 class="section-title">🎨 Примеры работ</h2>
+    <p class="section-subtitle">Каждое фото превращается в уникальный смешной портрет в выбранном стиле</p>
+    <div class="examples-grid">
+      <div class="example-card">
+        <div class="example-pair">
+          <div class="example-img"></div>
+          <div class="example-arrow">→</div>
+          <div class="example-img after"></div>
+        </div>
+        <div class="example-card-label">
+          <span>Исходное фото</span>
+          <span>✨ карикатура</span>
+        </div>
+      </div>
+      <div class="example-card">
+        <div class="example-pair">
+          <div class="example-img"></div>
+          <div class="example-arrow">→</div>
+          <div class="example-img after"></div>
+        </div>
+        <div class="example-card-label">
+          <span>Исходное фото</span>
+          <span>✨ шарж</span>
+        </div>
+      </div>
+      <div class="example-card">
+        <div class="example-pair">
+          <div class="example-img"></div>
+          <div class="example-arrow">→</div>
+          <div class="example-img after"></div>
+        </div>
+        <div class="example-card-label">
+          <span>Исходное фото</span>
+          <span>✨ комикс</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Styles ===== -->
+<section class="section" style="padding-top:0">
+  <div class="container reveal">
+    <h2 class="section-title">10+ стилей на выбор</h2>
+    <p class="section-subtitle">От классических шаржей до мемов и аниме — найди свой стиль</p>
+    <div class="styles-grid">
+      <div class="style-item"><span class="style-icon">✏️</span>Карикатура</div>
+      <div class="style-item"><span class="style-icon">🎭</span>Шарж</div>
+      <div class="style-item"><span class="style-icon">😂</span>Мем</div>
+      <div class="style-item"><span class="style-icon">💬</span>Комикс</div>
+      <div class="style-item"><span class="style-icon">🌸</span>Аниме</div>
+      <div class="style-item"><span class="style-icon">🎨</span>Акварель</div>
+      <div class="style-item"><span class="style-icon">🖌️</span>Масло</div>
+      <div class="style-item"><span class="style-icon">📦</span>3D-стиль</div>
+      <div class="style-item"><span class="style-icon">✒️</span>Скетч</div>
+      <div class="style-item"><span class="style-icon">🟦</span>Пиксель-арт</div>
+      <div class="style-item"><span class="style-icon">🖼️</span>Поп-арт</div>
+      <div class="style-item"><span class="style-icon">👻</span>Призрак</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How It Works ===== -->
+<section class="section" style="padding-top:0">
+  <div class="container reveal">
+    <h2 class="section-title">⚙️ Как это работает</h2>
+    <p class="section-subtitle">Всего 3 простых шага — и смешной портрет готов</p>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Загрузи фото</h3>
+        <p>Отправь фото боту в MAX — подойдет любой снимок</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Выбери стиль</h3>
+        <p>Карикатура, шарж, мем, аниме или один из 10+ стилей</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Получи результат</h3>
+        <p>Через 1–3 минуты портрет будет готов — делись с друзьями!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pricing ===== -->
+<section class="section" id="pricing">
+  <div class="container reveal">
+    <h2 class="section-title">💰 Выбери пакет</h2>
+    <p class="section-subtitle">Чем больше портретов — тем выгоднее каждый</p>
+    <div style="text-align:center; margin-bottom:10px; color:#999aae; font-size:14px;">💡 Чем больше пакет — тем дешевле каждый портрет</div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-count">1 портрет</div>
+        <div class="pricing-old-price">77 ₽</div>
+        <div class="pricing-price">59 ₽</div>
+        <div class="pricing-per">59 ₽ за шт</div>
+        <a class="pricing-btn" href="https://max.ru/se13299668_1_bot" target="_blank">Попробовать</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-save-badge">Экономия 24%</div>
+        <div class="pricing-count">5 портретов</div>
+        <div class="pricing-old-price">265 ₽</div>
+        <div class="pricing-price">199 ₽</div>
+        <div class="pricing-per">~40 ₽ за шт</div>
+        <a class="pricing-btn" href="https://max.ru/se13299668_1_bot" target="_blank">Выбрать</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="popular-badge">🔥 Хит</div>
+        <div class="pricing-save-badge">Экономия 60%</div>
+        <div class="pricing-count">10 портретов</div>
+        <div class="pricing-old-price">750 ₽</div>
+        <div class="pricing-price">299 ₽</div>
+        <div class="pricing-per">~30 ₽ за шт</div>
+        <a class="pricing-btn" href="https://max.ru/se13299668_1_bot" target="_blank">Выбрать</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-save-badge">Экономия 64%</div>
+        <div class="pricing-count">30 портретов</div>
+        <div class="pricing-old-price">2 220 ₽</div>
+        <div class="pricing-price">799 ₽</div>
+        <div class="pricing-per">~27 ₽ за шт</div>
+        <a class="pricing-btn" href="https://max.ru/se13299668_1_bot" target="_blank">Выбрать</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-save-badge">Экономия 68%</div>
+        <div class="pricing-count">60 портретов</div>
+        <div class="pricing-old-price">4 350 ₽</div>
+        <div class="pricing-price">1 390 ₽</div>
+        <div class="pricing-per">~23 ₽ за шт</div>
+        <a class="pricing-btn" href="https://max.ru/se13299668_1_bot" target="_blank">VIP-пакет</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reviews ===== -->
+<section class="section" style="padding-top:0">
+  <div class="container reveal">
+    <h2 class="section-title">💬 Отзывы</h2>
+    <p class="section-subtitle">Что говорят наши пользователи</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar a">А</div>
+          <div>
+            <div class="review-name">Алексей</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">Сделал портрет коллеге на день рождения — он был в шоке! Все отдел теперь скидываются на портреты. Серьёзно, попробуйте</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar b">М</div>
+          <div>
+            <div class="review-name">Мария</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">Купила 10 штук — отправляю друзьям в подарок. Каждый в восторге! Особенно мем-стиль зашёл 😂</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar c">Д</div>
+          <div>
+            <div class="review-name">Дмитрий</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">Ждал几个小时？Нет, буквально 2 минуты! Результат превзошёл ожидания. Аниме-стиль вообще огонь 🔥</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Benefits ===== -->
+<section class="section" style="padding-top:0">
+  <div class="container reveal">
+    <h2 class="section-title">🔥 Почему выбирают нас</h2>
+    <p class="section-subtitle">Тысячи пользователей уже создали свои смешные портреты</p>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-text">
+          <h4>Генерация за 1–3 минуты</h4>
+          <p>Не жди часами — результат приходит в MAX за пару минут</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🎨</div>
+        <div class="benefit-text">
+          <h4>10+ уникальных стилей</h4>
+          <p>Карикатуры, шаржи, мемы, аниме, 3D — на любой вкус</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-text">
+          <h4>Работает через MAX</h4>
+          <p>Никаких сайтов и регистраций — всё внутри привычного мессенджера</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🎁</div>
+        <div class="benefit-text">
+          <h4>Идеальный подарок</h4>
+          <p>Рассмеши друзей, коллег и близких уникальным портретом</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🖼️</div>
+        <div class="benefit-text">
+          <h4>Высокое разрешение</h4>
+          <p>Портреты в HD — можно распечатать, отправить или выложить в соцсети</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">💎</div>
+        <div class="benefit-text">
+          <h4>Без водяных знаков</h4>
+          <p>Чистый результат без логотипов — только твой портрет</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container reveal">
+    <h2 class="section-title">❓ Частые вопросы</h2>
+    <p class="section-subtitle">Ответы на то, о чём спрашивают чаще всего</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          Какое фото можно загружать?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Подойдёт любое фото человека или группы людей — селфи, портрет, корпоративное фото. Чем чётче и крупнее лицо, тем качественнее получится портрет.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Сколько времени занимает генерация?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Обычно от 1 до 3 минут. В редких случаях при большой нагрузке — до 5 минут. Вы получите уведомление в MAX, как только портрет будет готов.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Как оплатить?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Оплата проходит прямо внутри MAX через защищённые платежи. Принимаем карты, SBP и другие способы. Все данные защищены.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Можно ли заказать портрет в подарок?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Да! Это отличная идея. Вы можете сгенерировать портрет друга, коллеги или родственника и отправить ему — гарантированно вызовет улыбку 😄</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="final-cta">
+  <div class="container reveal">
+    <h2>Готов создать свой смешной портрет?</h2>
+    <p>Переходи в бота в MAX, загружай фото и получай результат через пару минут</p>
+    <a class="btn-primary" href="https://max.ru/se13299668_1_bot" target="_blank">👉 Перейти в MAX и начать</a>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <p><a href="https://max.ru/se13299668_1_bot" target="_blank">Смешные портреты</a> — бот в MAX | Сделано с ❤️</p>
+</footer>
+
+<!-- ===== Sticky CTA (Mobile) ===== -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="https://max.ru/se13299668_1_bot" target="_blank">🔥 Создать смешной портрет</a>
+</div>
+
+<!-- ===== Desktop CTA (floating) ===== -->
+<div class="desktop-cta">
+  <a href="https://max.ru/se13299668_1_bot" target="_blank">🚀 Создать портрет в MAX</a>
+</div>
+
+<script>
+// === Reveal on scroll ===
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => observer.observe(el));
+
+// === FAQ Accordion ===
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(open => open.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// === Sticky CTA on mobile ===
+const stickyCta = document.getElementById('stickyCta');
+const hero = document.querySelector('.hero');
+let ticking = false;
+
+function updateSticky() {
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  if (heroBottom < 0) {
+    stickyCta.classList.add('show');
+  } else {
+    stickyCta.classList.remove('show');
+  }
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(updateSticky);
+    ticking = true;
+  }
+}, { passive: true });
+
+// === Online counter (simulated) ===
+const onlineEl = document.getElementById('onlineCount');
+let currentOnline = 38;
+setInterval(() => {
+  const change = Math.random() > 0.5 ? 1 : -1;
+  currentOnline = Math.max(20, Math.min(60, currentOnline + change));
+  onlineEl.textContent = currentOnline;
+}, 5000);
+</script>
+
+</body>
+</html>
