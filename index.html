@@ -899,8 +899,15 @@ h1, h2, h3 {
 
   .example-arrow {
     height: auto;
-    padding: 8px 0;
-    transform: rotate(90deg);
+    padding: 12px 0;
+    min-height: unset;
+    transform: none;
+    font-size: 0;
+  }
+  .example-arrow::after {
+    content: '↓';
+    font-size: 24px;
+    color: #ff6b35;
   }
 }
 
