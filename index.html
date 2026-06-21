@@ -294,78 +294,10 @@ h1, h2, h3 {
   margin: 0 auto 48px;
 }
 
-/* ===== Examples Grid — Side by Side ===== */
-.examples-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.example-card {
-  background: #14141c;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.06);
-  transition: transform .25s, border-color .25s;
-}
-
-.example-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,45,85,.2);
-}
-
-.example-pair {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-}
-
-.example-img {
+.examples-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(135deg, #1e1e2a, #2a2a3a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  font-size: 14px;
-  position: relative;
-}
-
-.example-img::before {
-  content: '📷 Исходное фото';
-  opacity: .4;
-}
-
-.example-img.after::before {
-  content: '✨ Результат';
-}
-
-.example-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  font-size: 24px;
-  color: #ff6b35;
-  background: rgba(255,107,53,.08);
-  height: 100%;
-  min-height: 60px;
-}
-
-.example-card-label {
-  padding: 14px 16px;
-  font-size: 13px;
-  color: #999aae;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-
-.example-card-label span:last-child {
-  color: #ff6b35;
-  font-weight: 600;
+  border-radius: 16px;
+  display: block;
 }
 
 /* ===== Styles Grid ===== */
@@ -893,22 +825,6 @@ h1, h2, h3 {
     height: 133px;
   }
 
-  .example-pair {
-    grid-template-columns: 1fr;
-  }
-
-  .example-arrow {
-    height: auto;
-    padding: 12px 0;
-    min-height: unset;
-    transform: none;
-    font-size: 0;
-  }
-  .example-arrow::after {
-    content: '↓';
-    font-size: 24px;
-    color: #ff6b35;
-  }
 }
 
 @media (max-width: 420px) {
@@ -977,41 +893,7 @@ h1, h2, h3 {
   <div class="container reveal">
     <h2 class="section-title">🎨 Примеры работ</h2>
     <p class="section-subtitle">Каждое фото превращается в уникальный смешной портрет в выбранном стиле</p>
-    <div class="examples-grid">
-      <div class="example-card">
-        <div class="example-pair">
-          <div class="example-img"></div>
-          <div class="example-arrow">→</div>
-          <div class="example-img after"></div>
-        </div>
-        <div class="example-card-label">
-          <span>Исходное фото</span>
-          <span>✨ карикатура</span>
-        </div>
-      </div>
-      <div class="example-card">
-        <div class="example-pair">
-          <div class="example-img"></div>
-          <div class="example-arrow">→</div>
-          <div class="example-img after"></div>
-        </div>
-        <div class="example-card-label">
-          <span>Исходное фото</span>
-          <span>✨ шарж</span>
-        </div>
-      </div>
-      <div class="example-card">
-        <div class="example-pair">
-          <div class="example-img"></div>
-          <div class="example-arrow">→</div>
-          <div class="example-img after"></div>
-        </div>
-        <div class="example-card-label">
-          <span>Исходное фото</span>
-          <span>✨ комикс</span>
-        </div>
-      </div>
-    </div>
+    <img class="examples-image" src="images/examples-collage.png" alt="Примеры работ">
   </div>
 </section>
 
