@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Смешные портреты — преврати фото в шедевр | Бот в MAX</title>
-<meta name="description" content="Загрузи фото, выбери стиль и получи смешной AI-портрет за 1 минуту. 10+ стилей: карикатура, шарж, мем, аниме. Работает через MAX.">
+<title>ПОРТРЕТ PRO — создай свой AI-образ за 1–3 минуты</title>
+<meta name="description" content="Загрузи фото, выбери стиль и получи свой AI-портрет за 1 минуту. 10+ стилей: от 59 ₽. Работает через MAX и Telegram.">
 <meta name="robots" content="index, follow">
-<meta name="keywords" content="AI портрет, шарж по фото, карикатура онлайн, смешные фото, MAX бот, генерация портрета">
-<meta name="theme-color" content="#ff2d55">
+<meta name="keywords" content="AI портрет, шарж по фото, карикатура онлайн, создать портрет, MAX бот, генерация портрета">
+<meta name="theme-color" content="#2563eb">
 <meta name="p:domain_verify" content="8d00862fd6841757edd8c3935bafb19d"/>
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Смешные портреты — преврати фото в шедевр">
-<meta property="og:description" content="Загрузи фото, выбери стиль и получи смешной AI-портрет за 1 минуту. 10+ стилей, от 59 ₽. Работает через MAX.">
-<meta property="og:image" content="https://i.oneme.ru/i?r=BTFjO43w8Yr1OSJ4tcurq5HiAZJIUcn50nog89w9zRyClPy4ePJqkr65xxKnGpLOYvo">
+<meta property="og:title" content="ПОРТРЕТ PRO — создай свой AI-образ">
+<meta property="og:description" content="Загрузи фото, выбери стиль и получи AI-портрет за 1 минуту. 10+ стилей, от 59 ₽.">
 <meta property="og:url" content="https://max.ru/se13299668_1_bot">
 
-<link rel="preconnect" href="https://i.oneme.ru">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://max.ru">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -27,7 +27,6 @@
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110028462', 'ym');
-
     ym(110028462, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110028462" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -45,11 +44,12 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   background: #0b0b0f;
   color: #e8e8ee;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -62,12 +62,88 @@ h1, h2, h3 {
   padding: 0 20px;
 }
 
-/* ===== Header ===== */
+/* ===== Background Glow ===== */
+.glow {
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  background: #2563eb;
+  filter: blur(220px);
+  opacity: 0.12;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== New Header ===== */
+.header-new {
+  text-align: center;
+  padding: 60px 20px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-text {
+  font-size: 56px;
+  font-weight: 800;
+  color: #60a5fa;
+  text-shadow: 0 0 40px rgba(96,165,250,0.5);
+  line-height: 1.1;
+}
+
+.subtitle-text {
+  font-size: 20px;
+  opacity: 0.85;
+  margin-top: 12px;
+  color: #c8c8d8;
+}
+
+.header-buttons {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-blue {
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.25s;
+  display: inline-block;
+}
+
+.btn-blue-primary {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  box-shadow: 0 0 30px rgba(37,99,235,0.35);
+}
+
+.btn-blue-primary:hover {
+  transform: scale(1.06);
+}
+
+.btn-blue-secondary {
+  border: 1px solid #3b82f6;
+  color: #93bbfc;
+}
+
+.btn-blue-secondary:hover {
+  background: rgba(59,130,246,0.12);
+  transform: scale(1.03);
+}
+
+/* ===== Old header (brand bar) ===== */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 14px 24px;
   max-width: 1000px;
   margin: 0 auto;
   gap: 12px;
@@ -78,40 +154,23 @@ h1, h2, h3 {
   align-items: center;
   gap: 10px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .header-brand img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
   object-fit: cover;
-}
-
-.header-btn {
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
-  color: #fff;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform .2s, box-shadow .2s;
-  flex-shrink: 0;
-}
-
-.header-btn:hover {
-  transform: scale(1.04);
-  box-shadow: 0 4px 20px rgba(255,45,85,.35);
 }
 
 /* ===== Hero ===== */
 .hero {
   padding: 10px 20px 50px;
   text-align: center;
-  background: radial-gradient(ellipse 700px 400px at 50% 0, rgba(255,45,85,.15), transparent);
+  background: radial-gradient(ellipse 700px 400px at 50% 0, rgba(37,99,235,.12), transparent);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-avatar {
@@ -119,7 +178,7 @@ h1, h2, h3 {
   height: 200px;
   border-radius: 16px;
   margin-bottom: 28px;
-  box-shadow: 0 0 0 4px rgba(255,45,85,.3);
+  box-shadow: 0 0 0 4px rgba(59,130,246,.25);
   object-fit: contain;
 }
 
@@ -127,7 +186,7 @@ h1, h2, h3 {
   font-size: clamp(32px, 6vw, 52px);
   font-weight: 800;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #fff 40%, #ff6b35);
+  background: linear-gradient(135deg, #fff 40%, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -142,7 +201,7 @@ h1, h2, h3 {
 
 .btn-primary {
   display: inline-block;
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   color: #fff;
   padding: 16px 40px;
   border-radius: 40px;
@@ -150,12 +209,12 @@ h1, h2, h3 {
   font-weight: 700;
   text-decoration: none;
   transition: transform .25s, box-shadow .25s;
-  box-shadow: 0 4px 24px rgba(255,45,85,.3);
+  box-shadow: 0 4px 24px rgba(37,99,235,.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(255,45,85,.45);
+  box-shadow: 0 8px 32px rgba(37,99,235,.45);
 }
 
 .btn-secondary {
@@ -184,95 +243,24 @@ h1, h2, h3 {
   gap: 12px;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: rgba(255,45,85,.12);
-  color: #ff6b6b;
-  padding: 6px 16px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
 .hero-discount-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: linear-gradient(135deg, rgba(255,107,53,.2), rgba(255,45,85,.2));
-  border: 1px solid rgba(255,45,85,.3);
-  color: #ffb347;
+  background: linear-gradient(135deg, rgba(37,99,235,.2), rgba(59,130,246,.2));
+  border: 1px solid rgba(59,130,246,.3);
+  color: #93bbfc;
   padding: 8px 20px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 28px;
-  animation: pulse-glow 2s ease-in-out infinite;
+  animation: pulse-glow-blue 2s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255,45,85,0); }
-  50% { box-shadow: 0 0 16px 4px rgba(255,45,85,.2); }
-}
-
-.hero-social-proof {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.hero-avatars {
-  display: flex;
-}
-
-.hero-avatars span {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  margin-left: -8px;
-  border: 2px solid #0b0b0f;
-}
-
-.hero-avatars span:first-child { margin-left: 0; background: #3b82f6; }
-.hero-avatars span:nth-child(2) { background: #8b5cf6; }
-.hero-avatars span:nth-child(3) { background: #f59e0b; }
-.hero-avatars span:nth-child(4) { background: #10b981; }
-.hero-avatars span:nth-child(5) { background: #ef4444; }
-
-.hero-social-text {
-  font-size: 14px;
-  color: #999aae;
-}
-
-.hero-social-text b {
-  color: #e8e8ee;
-}
-
-.hero-counter {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.08);
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-size: 14px;
-  color: #999aae;
-  margin-bottom: 24px;
-}
-
-.hero-counter b {
-  color: #ff6b35;
-  font-size: 16px;
+@keyframes pulse-glow-blue {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
+  50% { box-shadow: 0 0 16px 4px rgba(37,99,235,.15); }
 }
 
 /* ===== Section ===== */
@@ -321,7 +309,7 @@ h1, h2, h3 {
 }
 
 .style-item:hover {
-  border-color: rgba(255,45,85,.25);
+  border-color: rgba(59,130,246,.25);
   background: #1c1c28;
   transform: translateY(-2px);
 }
@@ -351,14 +339,14 @@ h1, h2, h3 {
 
 .step-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(255,45,85,.2);
+  border-color: rgba(59,130,246,.2);
 }
 
 .step-number {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,12 +385,12 @@ h1, h2, h3 {
 
 .pricing-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255,45,85,.2);
+  border-color: rgba(59,130,246,.2);
 }
 
 .pricing-card.popular {
-  border-color: #ff2d55;
-  background: #1a0f14;
+  border-color: #3b82f6;
+  background: #0f172a;
   transform: scale(1.04);
   z-index: 1;
 }
@@ -416,7 +404,7 @@ h1, h2, h3 {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   padding: 4px 18px;
   border-radius: 20px;
   font-size: 12px;
@@ -444,7 +432,7 @@ h1, h2, h3 {
 
 .pricing-old-price {
   font-size: 15px;
-  color: #666;
+  color: #555;
   text-decoration: line-through;
   margin-bottom: 2px;
 }
@@ -457,7 +445,7 @@ h1, h2, h3 {
 
 .pricing-per {
   font-size: 13px;
-  color: #666;
+  color: #555;
   margin-bottom: 20px;
 }
 
@@ -478,12 +466,12 @@ h1, h2, h3 {
 }
 
 .pricing-card.popular .pricing-btn {
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   color: #fff;
 }
 
 .pricing-card.popular .pricing-btn:hover {
-  box-shadow: 0 4px 20px rgba(255,45,85,.35);
+  box-shadow: 0 4px 20px rgba(37,99,235,.35);
 }
 
 /* ===== Reviews ===== */
@@ -502,7 +490,7 @@ h1, h2, h3 {
 }
 
 .review-card:hover {
-  border-color: rgba(255,45,85,.15);
+  border-color: rgba(59,130,246,.15);
 }
 
 .review-header {
@@ -563,7 +551,7 @@ h1, h2, h3 {
 }
 
 .benefit-item:hover {
-  border-color: rgba(255,45,85,.15);
+  border-color: rgba(59,130,246,.15);
 }
 
 .benefit-icon {
@@ -609,7 +597,7 @@ h1, h2, h3 {
 }
 
 .faq-question:hover {
-  color: #ff6b35;
+  color: #60a5fa;
 }
 
 .faq-arrow {
@@ -643,7 +631,7 @@ h1, h2, h3 {
 .final-cta {
   text-align: center;
   padding: 80px 20px;
-  background: radial-gradient(ellipse 700px 300px at 50% 100%, rgba(255,45,85,.12), transparent);
+  background: radial-gradient(ellipse 700px 300px at 50% 100%, rgba(37,99,235,.1), transparent);
 }
 
 .final-cta h2 {
@@ -681,7 +669,7 @@ h1, h2, h3 {
 
 .sticky-cta a {
   display: block;
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   color: #fff;
   padding: 14px 24px;
   border-radius: 30px;
@@ -690,11 +678,11 @@ h1, h2, h3 {
   text-decoration: none;
   text-align: center;
   transition: box-shadow .2s;
-  box-shadow: 0 4px 20px rgba(255,45,85,.3);
+  box-shadow: 0 4px 20px rgba(37,99,235,.3);
 }
 
 .sticky-cta a:hover {
-  box-shadow: 0 8px 32px rgba(255,45,85,.45);
+  box-shadow: 0 8px 32px rgba(37,99,235,.45);
 }
 
 /* ===== Desktop CTA (floating) ===== */
@@ -709,35 +697,23 @@ h1, h2, h3 {
   display: none;
   padding: 14px 22px;
   border-radius: 30px;
-  background: linear-gradient(135deg, #ff6b35, #ff2d55);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   color: #fff;
   font-weight: 700;
   font-size: 14px;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(255,45,85,.3);
+  box-shadow: 0 8px 24px rgba(37,99,235,.3);
   transition: transform .25s, box-shadow .25s;
 }
 
 .desktop-cta a:hover {
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 12px 32px rgba(255,45,85,.45);
+  box-shadow: 0 12px 32px rgba(37,99,235,.45);
 }
 
 @media (min-width: 769px) {
   .desktop-cta a {
     display: inline-block;
-  }
-}
-
-@media (max-width: 768px) {
-  .sticky-cta {
-    display: block;
-  }
-  .footer {
-    padding-bottom: 80px;
-  }
-  .final-cta {
-    padding-bottom: 100px;
   }
 }
 
@@ -756,7 +732,7 @@ h1, h2, h3 {
 }
 
 .footer a:hover {
-  color: #ff6b35;
+  color: #60a5fa;
 }
 
 .footer-legal {
@@ -769,7 +745,7 @@ h1, h2, h3 {
   color: #555;
 }
 .footer-legal a:hover {
-  color: #ff6b35;
+  color: #60a5fa;
 }
 
 /* ===== Animations ===== */
@@ -803,6 +779,21 @@ h1, h2, h3 {
 }
 
 /* ===== Media ===== */
+@media (max-width: 768px) {
+  .sticky-cta {
+    display: block;
+  }
+  .footer {
+    padding-bottom: 80px;
+  }
+  .final-cta {
+    padding-bottom: 100px;
+  }
+  .logo-text {
+    font-size: 38px;
+  }
+}
+
 @media (max-width: 640px) {
   .pricing-grid {
     grid-template-columns: 1fr 1fr;
@@ -829,16 +820,10 @@ h1, h2, h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .header-btn {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
-
   .hero-avatar {
     width: 400px;
     height: 133px;
   }
-
 }
 
 @media (max-width: 420px) {
@@ -859,41 +844,28 @@ h1, h2, h3 {
 </head>
 <body>
 
-<!-- ===== Header ===== -->
-<header class="header">
-  <div class="header-brand">
-    <img src="images/logo-square.png" alt="Смешные портреты">
-    Смешные портреты
-  </div>
-  <a class="header-btn" href="https://max.ru/se13299668_1_bot" target="_blank">Запустить в MAX</a>
-</header>
+<div class="glow"></div>
 
-<!-- ===== Hero ===== -->
+<!-- ===== Header: PORTRAIT PRO ===== -->
+<div class="header-new">
+  <div class="logo-text">ПОРТРЕТ PRO</div>
+  <div class="subtitle-text">Создай свой AI-образ за 1–3 минуты</div>
+  <div class="header-buttons">
+    <a href="https://max.ru/se13299668_1_bot" target="_blank" class="btn-blue btn-blue-primary">🎨 Начать в MAX</a>
+    <a href="https://t.me/PortretFunny_bot" target="_blank" class="btn-blue btn-blue-secondary">💬 Telegram</a>
+  </div>
+</div>
+
+<!-- ===== Old Hero (discount + CTA) ===== -->
 <section class="hero">
   <div class="container">
-    <img class="hero-avatar" src="images/logo-wide.png" alt="Смешные портреты">
-    <h1>Преврати фото в смешной портрет за 1 минуту</h1>
+    <img class="hero-avatar" src="images/logo-wide.png" alt="ПОРТРЕТ PRO">
 
     <div class="hero-discount-badge">
       🔥 −20% на первый пакет — до <span id="discountDate"></span>
     </div>
 
-    <p>Загрузи фото → выбери стиль → получи смешной AI-портрет за 1–3 минуты прямо в MAX. Без регистрации и сайтов.</p>
-
-    <div class="hero-social-proof">
-      <div class="hero-avatars">
-        <span>👤</span>
-        <span>👤</span>
-        <span>👤</span>
-        <span>👤</span>
-        <span>👤</span>
-      </div>
-      <div class="hero-social-text"><b>12 450+</b> портретов уже создано</div>
-    </div>
-
-    <div class="hero-counter">
-      ⚡ <b id="onlineCount">38</b> человек сейчас в боте
-    </div>
+    <p>Загрузи фото → выбери стиль → получи AI-портрет за 1–3 минуты прямо в MAX или Telegram</p>
 
     <div class="hero-buttons">
       <a class="btn-primary" href="https://max.ru/se13299668_1_bot" target="_blank">🔥 Создать портрет</a>
@@ -906,7 +878,7 @@ h1, h2, h3 {
 <section class="section" id="examples">
   <div class="container reveal">
     <h2 class="section-title">🎨 Примеры работ</h2>
-    <p class="section-subtitle">Каждое фото превращается в уникальный смешной портрет в выбранном стиле</p>
+    <p class="section-subtitle">Каждое фото превращается в уникальный портрет в выбранном стиле</p>
     <img class="examples-image" src="images/examples-collage.png" alt="Примеры работ">
   </div>
 </section>
@@ -937,12 +909,12 @@ h1, h2, h3 {
 <section class="section" style="padding-top:0">
   <div class="container reveal">
     <h2 class="section-title">⚙️ Как это работает</h2>
-    <p class="section-subtitle">Всего 3 простых шага — и смешной портрет готов</p>
+    <p class="section-subtitle">Всего 3 простых шага — и портрет готов</p>
     <div class="steps">
       <div class="step-card">
         <div class="step-number">1</div>
         <h3>Загрузи фото</h3>
-        <p>Отправь фото боту в MAX — подойдет любой снимок</p>
+        <p>Отправь фото боту в MAX или Telegram — подойдет любой снимок</p>
       </div>
       <div class="step-card">
         <div class="step-number">2</div>
@@ -1053,13 +1025,13 @@ h1, h2, h3 {
 <section class="section" style="padding-top:0">
   <div class="container reveal">
     <h2 class="section-title">🔥 Почему выбирают нас</h2>
-    <p class="section-subtitle">Тысячи пользователей уже создали свои смешные портреты</p>
+    <p class="section-subtitle">Тысячи пользователей уже создали свои портреты</p>
     <div class="benefits-grid">
       <div class="benefit-item">
         <div class="benefit-icon">⚡</div>
         <div class="benefit-text">
           <h4>Генерация за 1–3 минуты</h4>
-          <p>Не жди часами — результат приходит в MAX за пару минут</p>
+          <p>Не жди часами — результат приходит за пару минут</p>
         </div>
       </div>
       <div class="benefit-item">
@@ -1072,8 +1044,8 @@ h1, h2, h3 {
       <div class="benefit-item">
         <div class="benefit-icon">📱</div>
         <div class="benefit-text">
-          <h4>Работает через MAX</h4>
-          <p>Никаких сайтов и регистраций — всё внутри привычного мессенджера</p>
+          <h4>Работает через MAX и Telegram</h4>
+          <p>Без регистраций — всё внутри привычных мессенджеров</p>
         </div>
       </div>
       <div class="benefit-item">
@@ -1122,7 +1094,7 @@ h1, h2, h3 {
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Обычно от 1 до 3 минут. В редких случаях при большой нагрузке — до 5 минут. Вы получите уведомление в MAX, как только портрет будет готов.</div>
+          <div class="faq-answer-inner">Обычно от 1 до 3 минут. В редких случаях при большой нагрузке — до 5 минут. Вы получите уведомление, как только портрет будет готов.</div>
         </div>
       </div>
       <div class="faq-item">
@@ -1131,7 +1103,7 @@ h1, h2, h3 {
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Оплата проходит прямо внутри MAX через защищённые платежи. Принимаем карты, SBP и другие способы. Все данные защищены.</div>
+          <div class="faq-answer-inner">Оплата проходит внутри MAX или Telegram через защищённые платежи. Принимаем карты, СБП и другие способы. Все данные защищены.</div>
         </div>
       </div>
       <div class="faq-item">
@@ -1150,9 +1122,9 @@ h1, h2, h3 {
 <!-- ===== Final CTA ===== -->
 <section class="final-cta">
   <div class="container reveal">
-    <h2>Готов создать свой смешной портрет?</h2>
-    <p>Переходи в бота в MAX, загружай фото и получай результат через пару минут</p>
-    <a class="btn-primary" href="https://max.ru/se13299668_1_bot" target="_blank">👉 Перейти в MAX и начать</a>
+    <h2>Готов создать свой портрет?</h2>
+    <p>Переходи в бота, загружай фото и получай результат через пару минут</p>
+    <a class="btn-primary" href="https://max.ru/se13299668_1_bot" target="_blank">🎨 Создать портрет</a>
   </div>
 </section>
 
@@ -1166,12 +1138,12 @@ h1, h2, h3 {
     <a href="doc/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ И ОБРАБОТКИ  ПЕРСОНАЛЬНЫХ ДАННЫХ.docx" target="_blank">Политика конфиденциальности</a> |
     <a href="doc/СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ  ДАННЫХ.docx" target="_blank">Согласие на обработку данных</a>
   </p>
-  <p><a href="https://max.ru/se13299668_1_bot" target="_blank">Смешные портреты</a> — бот в MAX | Сделано с ❤️</p>
+  <p><a href="https://max.ru/se13299668_1_bot" target="_blank">ПОРТРЕТ PRO</a> — бот в MAX | Сделано с ❤️</p>
 </footer>
 
 <!-- ===== Sticky CTA (Mobile) ===== -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="https://max.ru/se13299668_1_bot" target="_blank">🔥 Создать смешной портрет</a>
+  <a href="https://max.ru/se13299668_1_bot" target="_blank">🔥 Создать портрет</a>
 </div>
 
 <!-- ===== Desktop CTA (floating) ===== -->
@@ -1229,15 +1201,6 @@ window.addEventListener('scroll', () => {
     ticking = true;
   }
 }, { passive: true });
-
-// === Online counter (simulated) ===
-const onlineEl = document.getElementById('onlineCount');
-let currentOnline = 38;
-setInterval(() => {
-  const change = Math.random() > 0.5 ? 1 : -1;
-  currentOnline = Math.max(20, Math.min(60, currentOnline + change));
-  onlineEl.textContent = currentOnline;
-}, 5000);
 
 // === Yandex.Metrika goal: CTA click ===
 document.querySelectorAll('a[href*="se13299668_1_bot"]').forEach(btn => {
